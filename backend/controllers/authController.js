@@ -64,8 +64,7 @@ console.log(user)
       name: user.name,
       email: user.email,
       token: generateToken(user._id),
-      followers: [],
-    following: [],
+
     })
   } else {
     res.status(400)
