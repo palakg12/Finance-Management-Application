@@ -15,7 +15,15 @@ const UserSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please add a password'],
     },
+    transactions: {
+      type: [],
   },
+
+  createdAt: {
+      type:Date,
+      default: Date.now,
+  },
+},
   {
     timestamps: true,
   }

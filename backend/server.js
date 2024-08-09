@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const colors = require('colors');
 const dotenv = require('dotenv').config();
 const { errorHandler } = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
@@ -16,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/auth', require('./routes/authRoutes'));
-
+app.use("/api/transaction", require('./routes/transactionRoutes'));
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
